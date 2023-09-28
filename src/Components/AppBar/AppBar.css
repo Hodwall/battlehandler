@@ -1,0 +1,32 @@
+.AppBar {
+    color: white;
+    height: 4em;
+    display: flex;
+    font-family: 'IM Fell DW Pica';
+}
+
+.AppTitle {
+    outline: 2px solid yellow;
+    font-size: 2em;
+    font-weight: bold;
+    color: hsl(40, 80%, 50%);
+}
+
+.AppTools {
+    outline: 2px solid yellow;
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5em;
+    padding-bottom: 1em;
+}
+
+.AppTools button {
+    background-color: tomato;
+    color: white;
+    font-family: 'IM Fell DW Pica';
+    border: none;
+    border-radius: 0.75em;
+    font-size: 0.8em;
+    padding: 0 2em;
+}
