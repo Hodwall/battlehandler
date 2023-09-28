@@ -18,12 +18,18 @@ html {
 }
 
 .App {
-  outline: 2px solid green;
   font-size: 16px;
   font-family: Asul;
 }
 
-/**/
-.AppContent {
-  outline: 2px solid blue;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

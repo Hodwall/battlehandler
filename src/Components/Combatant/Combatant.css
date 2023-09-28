@@ -1,0 +1,101 @@
+.Combatant {
+    height: 3em;
+    width: 100%;
+    background-color: hsl(0, 0%, 15%);
+    color: white;
+    display: grid;
+    grid-template-columns: 2em 5em 3em 5em 1em 1fr;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 2em 1em 1em 2em;
+    box-shadow: 1px 1px 8px hsl(0, 0%, 0%, 50%);
+}
+
+.Combatant .combatant-initiative {
+    width: 1.5em;
+    text-align: center;
+    border: 2px solid hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 80%);
+    border-radius: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.15em 0;
+    margin-left: 0.2em;
+    font-family: 'Asul';
+}
+
+.Combatant .combatant-remove {
+    background: none;
+    border: none;
+    width: 1.2em;
+    text-align: center;
+    color: hsl(0, 0%, 24.3%);
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    height: 1em;
+    cursor: pointer;
+}
+
+.Combatant .combatant-initiative:focus {
+    outline: none;
+}
+
+.Combatant .combatant-initiative::selection {
+    background: transparent;
+    color: hsl(0, 0%, 100%);
+}
+
+.Combatant .combatant-initiative.confirm {
+    position: absolute;
+}
+
+.Combatant .combatant-hp {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Asul';
+    color: hsl(0, 100%, 64%);
+}
+
+.Combatant .combatant-hp:focus {
+    border: none;
+    outline: none;
+}
+
+.Combatant .combatant-hp::selection {
+    background: transparent;
+    color: hsl(0, 100%, 74%);
+}
+
+
+.Combatant .combatant-hp.current {
+    text-align: right;
+}
+
+.Combatant .combatant-attack {
+    background-color: transparent;
+    width: 100%;
+    height: 70%;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    transform: scaleX(-1);
+}
+
+.Combatant .combatant-attack:disabled {
+    pointer-events: none;
+    color: gray;
+}
+
+.Combatant .combatant-hp.damage.empty {
+    color: hsl(0, 100%, 64%, 50%);
+}
+
+
+
+.Combatant button {
+    justify-self: flex-end;
+}

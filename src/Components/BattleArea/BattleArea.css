@@ -1,4 +1,8 @@
 .BattleArea {
-    outline: 2px solid red;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55em;
+    padding-top: 0.5em;
+    /* background-color: hsl(0, 100%, 64%, 2%); */
 }

@@ -1,8 +1,16 @@
+import useCombatantStore from '../../hooks/useCombatantStore';
+import AddCombatant from '../AddCombatant/AddCombatant';
 import './BattleTools.css';
-
+import { TbSortDescending } from 'react-icons/tb';
 
 const BattleTools = () => {
-    return <div className={'BattleTools'}>Battle Tools</div>;
+    const sortCombatants = useCombatantStore((state) => state.sortCombatants);
+    return (
+        <div className={'BattleTools'}>
+            <AddCombatant />
+            <button onClick={() => sortCombatants()}><TbSortDescending /></button>
+        </div>
+    );
 };
 
 export default BattleTools;
