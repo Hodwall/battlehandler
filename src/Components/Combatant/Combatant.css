@@ -4,7 +4,8 @@
     background-color: hsl(0, 0%, 15%);
     color: white;
     display: grid;
-    grid-template-columns: 2em 5em 3em 5em 1em 1fr;
+    /* grid-template-columns: 2em 5em 3em 5em 1em 1fr 1em 1em; */
+    grid-template-columns: repeat(4, min-content) 2em minmax(auto, 1fr) min-content;
     align-items: center;
     gap: 0.5em;
     border-radius: 2em 1em 1em 2em;
@@ -25,19 +26,6 @@
     font-family: 'Asul';
 }
 
-.Combatant .combatant-remove {
-    background: none;
-    border: none;
-    width: 1.2em;
-    text-align: center;
-    color: hsl(0, 0%, 24.3%);
-    font-size: 2.5em;
-    padding: 0;
-    margin: 0;
-    height: 1em;
-    cursor: pointer;
-}
-
 .Combatant .combatant-initiative:focus {
     outline: none;
 }
@@ -51,18 +39,24 @@
     position: absolute;
 }
 
-.Combatant .combatant-hp {
+.Combatant .combatant-hp,
+.Combatant .combatant-add-condition {
     background-color: transparent;
     border: none;
     font-size: 1.5em;
     font-weight: bold;
     font-family: 'Asul';
-    color: hsl(0, 100%, 64%);
 }
 
-.Combatant .combatant-hp:focus {
+.Combatant .combatant-hp:focus,
+.Combatant .combatant-add-condition {
     border: none;
     outline: none;
+}
+
+.Combatant .combatant-hp {
+    color: hsl(0, 100%, 64%);
+    width: 2.5em;
 }
 
 .Combatant .combatant-hp::selection {
@@ -70,9 +64,12 @@
     color: hsl(0, 100%, 74%);
 }
 
-
 .Combatant .combatant-hp.current {
     text-align: right;
+}
+
+.Combatant .combatant-hp.damage.empty {
+    color: hsl(0, 100%, 64%, 50%);
 }
 
 .Combatant .combatant-attack {
@@ -90,12 +87,35 @@
     color: gray;
 }
 
-.Combatant .combatant-hp.damage.empty {
-    color: hsl(0, 100%, 64%, 50%);
+.Combatant .combatant-conditions {
+    display: grid;
+    grid-template-columns: min-content auto;
+    overflow: hidden;
+    gap: 0.5em;
 }
 
+.Combatant .combatant-conditions .list {
+    display: flex;
+    gap: 0.2em;
+}
 
+.Combatant .combatant-add-condition {
+    border-left: 2px solid hsl(0, 0%, 20%);
+    padding-left: 0.4em;
+    color: hsl(152, 35%, 80%);
+    min-width: 5em;
+}
 
-.Combatant button {
+.Combatant .combatant-remove {
+    background: none;
+    border: none;
+    width: 1.2em;
+    text-align: center;
+    color: hsl(0, 0%, 24.3%);
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+    height: 1em;
+    cursor: pointer;
     justify-self: flex-end;
 }

@@ -25,12 +25,14 @@ const AddCombatant = () => {
             <div></div>
             <input
                 className={'initiative'}
+                type='number'
                 value={initiative}
                 onChange={(e) => setInitiative(+e.target.value)}
                 onFocus={(e) => e.target.select()}
             />
             <input
                 className={'amount'}
+                type='number'
                 value={amount}
                 onChange={(e) => setAmount(+e.target.value)}
                 onFocus={(e) => e.target.select()}

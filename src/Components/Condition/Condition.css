@@ -1,0 +1,31 @@
+.Condition {
+    background-color: hsl(152, 35%, 20%);
+    border-radius: 2em;
+    min-width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    white-space: nowrap;
+}
+
+.Condition .content {
+    padding: 0 0.5em;
+    align-self: center;
+    color: hsl(152, 35%, 60%);
+}
+
+.Condition .content span {
+    padding-left: 0.5em;
+    color: hsl(152, 35%, 90%);
+    font-weight: bold;
+}
+
+.Condition button {
+    background-color: transparent;
+    color: hsl(152, 35%, 15%);
+    border: none;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    line-height: 0.5em;
+    cursor: pointer;
+}
