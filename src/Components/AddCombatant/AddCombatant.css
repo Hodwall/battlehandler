@@ -1,6 +1,6 @@
 .AddCombatant {
     display: grid;
-    grid-template-columns: 5em 5em 5em;
+    grid-template-columns: 5em 5em 5em 5em;
     align-items: center;
     padding-left: 1em;
     column-gap: 1em;
@@ -14,7 +14,7 @@
     font-size: 2.5em;
     font-weight: bold;
     font-family: 'Asul';
-    color: hsl(0, 100%, 64%);
+
     height: 1em;
 }
 
@@ -30,6 +30,14 @@
 
 .AddCombatant .initiative {
     color: hsl(44, 100%, 50%);
+}
+
+.AddCombatant .hp {
+    color: hsl(0, 100%, 64%);
+}
+
+.AddCombatant .amount {
+    color: hsl(0, 0%, 64%);
 }
 
 .AddCombatant .label {

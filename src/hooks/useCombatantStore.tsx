@@ -43,7 +43,7 @@ const useCombatantStore = create<ICombatStore>((set) => ({
             })(),
             initiative: combatant.initiative,
             conditions: [],
-            hp: 0
+            hp: combatant.hp
         }].sort((a, b) => a.initiative - b.initiative)
     })),
     removeCombatant: (index) => set((state) => ({ combatants: [...(state.combatants.filter((c: ICombatant) => c.index != index))] })),
