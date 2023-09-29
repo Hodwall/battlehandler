@@ -18,6 +18,7 @@ interface ICombatStore {
     combatants: ICombatant[],
     addCombatant: (combatant: any) => void,
     removeCombatant: (index: number) => void,
+    removeAllCombatants: () => void,
     updateCombatantInitiative: (index: number, initiative: number) => void,
     sortCombatants: () => void,
     addCondition: (index: number, label: string) => void,
@@ -47,6 +48,7 @@ const useCombatantStore = create<ICombatStore>((set) => ({
         }].sort((a, b) => a.initiative - b.initiative)
     })),
     removeCombatant: (index) => set((state) => ({ combatants: [...(state.combatants.filter((c: ICombatant) => c.index != index))] })),
+    removeAllCombatants: () => set(() => ({ combatants: [] })),
     updateCombatantInitiative: (index, initiative) => set((state) => {
         const array_index = state.combatants.findIndex((c) => c.index === index);
         if (array_index !== -1) {

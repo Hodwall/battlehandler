@@ -14,7 +14,9 @@
     border: none;
     font-size: 2.5em;
     font-weight: bold;
-    color: hsl(0, 0%, 80%);
+    color: hsl(0, 0%, 70%);
     width: 2em;
     cursor: pointer;
+    align-self: end;
+    line-height: 1em;
 }
